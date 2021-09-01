@@ -1,0 +1,27 @@
+PROCEDURE insertion sort (n:Integer, VAR T:ARRAY_OF integer)
+var
+i,key: Integer;
+begin
+for i FROM 1 TO T.length STEP 1 DO
+key=T[i];
+ j = i-1;
+        while (j >= 0 and key < arr[j]) then
+                arr[j + 1] = arr[j]
+                j -= 1
+        arr[j + 1] = key
+END_FOR
+end
+ 
+ALGORITHM PRODUIT SCALAIRE
+var
+T: ARRAY_OF integer;
+n,i: integer;
+begin
+for i from 0 to n-1 step 1 do
+read (T);
+END_FOR
+insertion sort(n,T);
+for i from 0 to n-1 step 1 do
+write (T);
+END_FOR
+end
